@@ -9,7 +9,7 @@ const connect = require('gulp-connect');
 
 //compile sass and autoprefixer 
 gulp.task('css', function () {
-    return gulp.src('Starter-file/sass/**.scss')
+    return gulp.src('corona/sass/**.scss')
         .pipe(sass())
         .pipe(rename({basename:"style-dev"}))
         .pipe(autoprefixer('last 2 version'))
@@ -31,5 +31,5 @@ gulp.task('connect', function() {
 
 //watch
 gulp.task('watch',function(){
-    gulp.watch('Starter-file/sass/**.scss', gulp.series(['css']))
+    gulp.watch('corona/sass/**.scss', gulp.series(['css']))
 });
