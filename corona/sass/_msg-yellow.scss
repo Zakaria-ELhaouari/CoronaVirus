@@ -1,0 +1,13 @@
+.msg-yellow{
+    background: #f4cf1b;
+    width: 100%;
+    height: 8em;
+
+    .msg{
+        text-align: center;
+        &__title{
+            color: #1078ad;
+            padding:.7em  0 ;
+        }   
+    }
+}
