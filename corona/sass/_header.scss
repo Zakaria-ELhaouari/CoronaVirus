@@ -34,3 +34,46 @@
     }
 }
 
+@media only screen and (max-width: 600px) {
+    .header {
+        display: grid;
+        grid-template-columns: repeat(1, 100%);
+    
+        .infHead {
+            text-align: center;
+            padding: 0em;
+            &__title {
+                color: #1078ad;
+                padding: 1em;
+            }
+    
+            &__ques {
+                padding: 1em;
+                line-height: 2em;
+            }
+    
+            button {
+                padding: 1em 11em;
+                margin-top: 2em;
+                background-color: #cfe4ef;
+                border: solid 2px #1078ad;
+                color: #1078ad;
+                border-radius: 0.6em;
+                &:hover {
+                    background-color: #1078ad;
+                    color: white;
+                }
+            }
+        }
+    
+        .imgHead{
+            padding-top: 2em;
+            img{
+                width: 80%;
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+}

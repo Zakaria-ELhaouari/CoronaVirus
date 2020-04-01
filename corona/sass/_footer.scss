@@ -4,22 +4,25 @@
         text-align: center;
         color: #1078ad;
     }
-    main {
+    .first-tap {
         display: grid;
         grid-template-columns: repeat(2, 50%);
-
+        margin: 3em 0;
         .inf-contact {
             text-align: center;
 
             h3 {
                 color: #1078ad;
+                margin-bottom: 1em;
             }
 
             .inf-nmr {
+                margin-bottom: .5em;
             }
 
             .nmr {
-                color: green;
+                color: rgb(34, 255, 34);
+                margin-bottom: .5em;
             }
         }
 
@@ -31,6 +34,8 @@
 
                 li{
                     padding:  1em 0;
+                    border-bottom: solid #1078ad;
+                    margin: 0 9em;
                 }
             }
         }
@@ -39,7 +44,7 @@
     .last-tap{
         background-color:  #1078ad;
         width: 100%;
-        height: 2em;
+        height: 1em;
         margin-top: 1em;
     }
 }

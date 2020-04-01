@@ -26,7 +26,7 @@
 .msg-yellow {
   background: #f4cf1b;
   width: 100%;
-  height: 8em; }
+  padding: 2em 0; }
   .msg-yellow .msg {
     text-align: center; }
     .msg-yellow .msg__title {
@@ -57,6 +57,38 @@
         color: white; }
   .header .imgHead {
     padding-top: 2em; }
+
+@media only screen and (max-width: 600px) {
+  .header {
+    display: grid;
+    grid-template-columns: repeat(1, 100%); }
+    .header .infHead {
+      text-align: center;
+      padding: 0em; }
+      .header .infHead__title {
+        color: #1078ad;
+        padding: 1em; }
+      .header .infHead__ques {
+        padding: 1em;
+        line-height: 2em; }
+      .header .infHead button {
+        padding: 1em 11em;
+        margin-top: 2em;
+        background-color: #cfe4ef;
+        border: solid 2px #1078ad;
+        color: #1078ad;
+        border-radius: 0.6em; }
+        .header .infHead button:hover {
+          background-color: #1078ad;
+          color: white; }
+    .header .imgHead {
+      padding-top: 2em; }
+      .header .imgHead img {
+        width: 80%;
+        position: relative;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+                transform: translateX(-50%); } }
 
 .symptome h2 {
   text-align: center;
@@ -95,16 +127,53 @@
         padding-bottom: 1em; }
       .recomndation main .infList__list {
         list-style: none; }
+        .recomndation main .infList__list li {
+          margin: 1em 0; }
     .recomndation main .call {
       text-align: center; }
       .recomndation main .call h3 {
         color: #f4cf1b; }
       .recomndation main .call .num-phone {
         background-color: #f4cf1b;
-        margin: 2em 18em;
+        margin: 1em;
+        position: relative;
+        width: 20%;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
         padding: 1em 2em;
         border-radius: 1em;
         color: #1078ad; }
+
+@media only screen and (max-width: 600px) {
+  .recomndation main {
+    display: grid;
+    grid-template-columns: repeat(1, 100%); }
+    .recomndation main .infList {
+      padding-left: 3em;
+      color: white; }
+      .recomndation main .infList__par {
+        text-align: center;
+        padding-bottom: 1em; }
+      .recomndation main .infList__list {
+        list-style: none; }
+        .recomndation main .infList__list li {
+          margin: 1em 0; }
+    .recomndation main .call {
+      text-align: center; }
+      .recomndation main .call h3 {
+        color: #f4cf1b; }
+      .recomndation main .call .num-phone {
+        background-color: #f4cf1b;
+        margin: 1em 0;
+        position: relative;
+        width: 20%;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
+        padding: 1em 2em;
+        border-radius: 1em;
+        color: #1078ad; } }
 
 .nav-test {
   background-color: #96c5dc;
@@ -113,7 +182,7 @@
   .nav-test h2 {
     color: #1078ad; }
   .nav-test button {
-    padding: 1em 14em;
+    padding: 1em 11em;
     margin-top: 2em;
     background-color: #cfe4ef;
     border: solid 2px #1078ad;
@@ -128,24 +197,31 @@
   .footer h2 {
     text-align: center;
     color: #1078ad; }
-  .footer main {
+  .footer .first-tap {
     display: grid;
-    grid-template-columns: repeat(2, 50%); }
-    .footer main .inf-contact {
+    grid-template-columns: repeat(2, 50%);
+    margin: 3em 0; }
+    .footer .first-tap .inf-contact {
       text-align: center; }
-      .footer main .inf-contact h3 {
-        color: #1078ad; }
-      .footer main .inf-contact .nmr {
-        color: green; }
-    .footer main .ret {
+      .footer .first-tap .inf-contact h3 {
+        color: #1078ad;
+        margin-bottom: 1em; }
+      .footer .first-tap .inf-contact .inf-nmr {
+        margin-bottom: .5em; }
+      .footer .first-tap .inf-contact .nmr {
+        color: #22ff22;
+        margin-bottom: .5em; }
+    .footer .first-tap .ret {
       text-align: center;
       padding-top: 2em; }
-      .footer main .ret ul {
+      .footer .first-tap .ret ul {
         list-style: none; }
-        .footer main .ret ul li {
-          padding: 1em 0; }
+        .footer .first-tap .ret ul li {
+          padding: 1em 0;
+          border-bottom: solid #1078ad;
+          margin: 0 9em; }
   .footer .last-tap {
     background-color: #1078ad;
     width: 100%;
-    height: 2em;
+    height: 1em;
     margin-top: 1em; }
