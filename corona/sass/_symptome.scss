@@ -1,0 +1,28 @@
+.symptome{
+    h2{
+        text-align: center;
+        color:#1078ad;
+        padding-top: 2em;
+    }
+
+    main{
+        display: grid;
+        grid-template-columns: repeat(2 , 50%);
+        padding: 3em;
+        
+        .photo{
+            text-align: center;
+            padding: 2em;
+            &__img{
+                padding-bottom:1em ;
+            }
+
+            &__text{
+                color: #1078ad;
+                font-weight: 3em;
+            }
+            
+        }
+
+    }
+}

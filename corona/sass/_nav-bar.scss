@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.nav-bar {
+    background-image: url("../dist/Assets/SVG/Merged\ bar-11.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 4em;
+    display: grid;
+    grid-template-columns:repeat(2 , 50%) ;
+    .logo {
+        p {
+            padding-top: 1.5em;
+            padding-left: 3em;
+        }
+    }
+    .right-nav{
+        ul{
+            float: right;
+            display: flex;
+            padding-top: 1.5em;
+            padding-right: 3em;
+            list-style: none;
+            li{
+                padding: 0 1em ;
+            }
+        }
+    }
+}

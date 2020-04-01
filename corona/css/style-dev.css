@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+.nav-bar {
+  background-image: url("../dist/Assets/SVG/Merged bar-11.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 4em;
+  display: grid;
+  grid-template-columns: repeat(2, 50%); }
+  .nav-bar .logo p {
+    padding-top: 1.5em;
+    padding-left: 3em; }
+  .nav-bar .right-nav ul {
+    float: right;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: 1.5em;
+    padding-right: 3em;
+    list-style: none; }
+    .nav-bar .right-nav ul li {
+      padding: 0 1em; }
+
+.msg-yellow {
+  background: #f4cf1b;
+  width: 100%;
+  height: 8em; }
+  .msg-yellow .msg {
+    text-align: center; }
+    .msg-yellow .msg__title {
+      color: #1078ad;
+      padding: .7em  0; }
+
+.header {
+  display: grid;
+  grid-template-columns: repeat(2, 50%); }
+  .header .infHead {
+    text-align: center;
+    padding: 3em; }
+    .header .infHead__title {
+      color: #1078ad;
+      padding: 1em; }
+    .header .infHead__ques {
+      padding: 1em;
+      line-height: 2em; }
+    .header .infHead button {
+      padding: 1em 14em;
+      margin-top: 2em;
+      background-color: #cfe4ef;
+      border: solid 2px #1078ad;
+      color: #1078ad;
+      border-radius: 0.6em; }
+      .header .infHead button:hover {
+        background-color: #1078ad;
+        color: white; }
+  .header .imgHead {
+    padding-top: 2em; }
+
+.symptome h2 {
+  text-align: center;
+  color: #1078ad;
+  padding-top: 2em; }
+
+.symptome main {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  padding: 3em; }
+  .symptome main .photo {
+    text-align: center;
+    padding: 2em; }
+    .symptome main .photo__img {
+      padding-bottom: 1em; }
+    .symptome main .photo__text {
+      color: #1078ad;
+      font-weight: 3em; }
+
+.recomndation {
+  background-color: #1078ad;
+  width: 100%; }
+  .recomndation h2 {
+    text-align: center;
+    color: white;
+    padding-top: 1em;
+    padding-bottom: 2em; }
+  .recomndation main {
+    display: grid;
+    grid-template-columns: repeat(2, 50%); }
+    .recomndation main .infList {
+      padding-left: 6em;
+      color: white; }
+      .recomndation main .infList__par {
+        text-align: center;
+        padding-bottom: 1em; }
+      .recomndation main .infList__list {
+        list-style: none; }
+    .recomndation main .call {
+      text-align: center; }
+      .recomndation main .call h3 {
+        color: #f4cf1b; }
+      .recomndation main .call .num-phone {
+        background-color: #f4cf1b;
+        margin: 2em 18em;
+        padding: 1em 2em;
+        border-radius: 1em;
+        color: #1078ad; }
+
+.nav-test {
+  background-color: #96c5dc;
+  text-align: center;
+  padding: 2em; }
+  .nav-test h2 {
+    color: #1078ad; }
+  .nav-test button {
+    padding: 1em 14em;
+    margin-top: 2em;
+    background-color: #cfe4ef;
+    border: solid 2px #1078ad;
+    color: #1078ad;
+    border-radius: 0.6em; }
+    .nav-test button:hover {
+      background-color: #1078ad;
+      color: white; }
+
+.footer {
+  padding-top: 2em; }
+  .footer h2 {
+    text-align: center;
+    color: #1078ad; }
+  .footer main {
+    display: grid;
+    grid-template-columns: repeat(2, 50%); }
+    .footer main .inf-contact {
+      text-align: center; }
+      .footer main .inf-contact h3 {
+        color: #1078ad; }
+      .footer main .inf-contact .nmr {
+        color: green; }
+    .footer main .ret {
+      text-align: center;
+      padding-top: 2em; }
+      .footer main .ret ul {
+        list-style: none; }
+        .footer main .ret ul li {
+          padding: 1em 0; }
+  .footer .last-tap {
+    background-color: #1078ad;
+    width: 100%;
+    height: 2em;
+    margin-top: 1em; }

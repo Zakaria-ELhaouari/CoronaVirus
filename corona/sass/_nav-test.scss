@@ -1,0 +1,20 @@
+.nav-test{
+    background-color: #96c5dc;
+    text-align: center;
+    padding: 2em;
+    h2{
+        color:#1078ad;
+    }
+    button {
+        padding: 1em 14em;
+        margin-top: 2em;
+        background-color: #cfe4ef;
+        border: solid 2px #1078ad;
+        color: #1078ad;
+        border-radius: 0.6em;
+        &:hover {
+            background-color: #1078ad;
+            color: white;
+        }
+    }
+}
