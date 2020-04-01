@@ -1,0 +1,44 @@
+.recomndation{
+    background-color: #1078ad;
+    width: 100%;
+    h2{
+        text-align: center;
+        color: white;
+        padding-top: 1em;
+        padding-bottom: 2em;
+    }
+
+    main{
+        display: grid;
+        grid-template-columns: repeat(2,50%);
+        
+        .infList{
+            padding-left: 6em;
+            color: white;
+            &__par{
+                text-align: center;
+                padding-bottom: 1em;
+            }
+            &__list{
+                list-style: none;
+            }
+        }
+
+        .call{
+            text-align: center;
+            h3{
+                color: #f4cf1b;
+            }
+            .num-phone{
+                background-color: #f4cf1b;
+                margin: 2em 18em;
+                padding: 1em 2em;
+                border-radius: 1em;
+                color: #1078ad;
+            }
+        }
+    }
+    
+
+
+}
