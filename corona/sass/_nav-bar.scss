@@ -13,6 +13,7 @@
         p {
             padding-top: 1.5em;
             padding-left: 3em;
+            color: #1078ad;
         }
     }
     .right-nav{
@@ -24,6 +25,14 @@
             list-style: none;
             li{
                 padding: 0 1em ;
+                a{
+                    text-decoration: none;
+                    color: black;
+                    &:active {
+                        color: #1078ad;
+                        font-weight: bold;
+                      }
+                }
             }
         }
     }

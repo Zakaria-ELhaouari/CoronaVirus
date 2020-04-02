@@ -11,7 +11,8 @@
   grid-template-columns: repeat(2, 50%); }
   .nav-bar .logo p {
     padding-top: 1.5em;
-    padding-left: 3em; }
+    padding-left: 3em;
+    color: #1078ad; }
   .nav-bar .right-nav ul {
     float: right;
     display: -webkit-box;
@@ -22,6 +23,12 @@
     list-style: none; }
     .nav-bar .right-nav ul li {
       padding: 0 1em; }
+      .nav-bar .right-nav ul li a {
+        text-decoration: none;
+        color: black; }
+        .nav-bar .right-nav ul li a:active {
+          color: #1078ad;
+          font-weight: bold; }
 
 .msg-yellow {
   background: #f4cf1b;
@@ -60,8 +67,13 @@
 
 @media only screen and (max-width: 600px) {
   .header {
-    display: grid;
-    grid-template-columns: repeat(1, 100%); }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse; }
     .header .infHead {
       text-align: center;
       padding: 0em; }
@@ -209,8 +221,9 @@
       .footer .first-tap .inf-contact .inf-nmr {
         margin-bottom: .5em; }
       .footer .first-tap .inf-contact .nmr {
-        color: #22ff22;
-        margin-bottom: .5em; }
+        color: #19974b;
+        margin-bottom: .5em;
+        font-weight: bold; }
     .footer .first-tap .ret {
       text-align: center;
       padding-top: 2em; }
@@ -225,3 +238,42 @@
     width: 100%;
     height: 1em;
     margin-top: 1em; }
+
+.proteger h2 {
+  text-align: center;
+  color: #1078ad;
+  padding-top: 2em; }
+
+.proteger main {
+  display: grid;
+  grid-template-columns: repeat(3, 33.33%);
+  text-align: center;
+  margin-top: 1em; }
+  .proteger main div {
+    padding: 2em; }
+    .proteger main div img {
+      padding: 1em; }
+    .proteger main div p {
+      color: #1078ad; }
+  .proteger main .last-calque {
+    grid-column: span 3; }
+
+* {
+  font-family: 'Cairo', sans-serif !important; }
+
+.Informations {
+  text-align: center;
+  background-color: #b8d7e7;
+  color: #1078ad; }
+  .Informations h2 {
+    padding: 1em 0; }
+  .Informations p {
+    padding: 1em 0; }
+  .Informations button {
+    background-image: url("../dist/Assets/png/button-bg.png");
+    margin: 2em 4em;
+    padding: 1em 4em;
+    border: none; }
+    .Informations button a {
+      color: white;
+      text-decoration: none; }
