@@ -263,10 +263,17 @@
 
 .Informations {
   text-align: center;
-  background-color: blue; }
+  background-color: #b8d7e7;
+  color: #1078ad; }
   .Informations h2 {
     padding: 1em 0; }
   .Informations p {
     padding: 1em 0; }
   .Informations button {
-    margin: 1em 0; }
+    background-image: url("../dist/Assets/png/button-bg.png");
+    margin: 2em 4em;
+    padding: 1em 4em;
+    border: none; }
+    .Informations button a {
+      color: white;
+      text-decoration: none; }
