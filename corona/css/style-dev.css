@@ -11,7 +11,8 @@
   grid-template-columns: repeat(2, 50%); }
   .nav-bar .logo p {
     padding-top: 1.5em;
-    padding-left: 3em; }
+    padding-left: 3em;
+    color: #1078ad; }
   .nav-bar .right-nav ul {
     float: right;
     display: -webkit-box;
@@ -22,6 +23,12 @@
     list-style: none; }
     .nav-bar .right-nav ul li {
       padding: 0 1em; }
+      .nav-bar .right-nav ul li a {
+        text-decoration: none;
+        color: black; }
+        .nav-bar .right-nav ul li a:active {
+          color: #1078ad;
+          font-weight: bold; }
 
 .msg-yellow {
   background: #f4cf1b;
@@ -214,8 +221,9 @@
       .footer .first-tap .inf-contact .inf-nmr {
         margin-bottom: .5em; }
       .footer .first-tap .inf-contact .nmr {
-        color: #22ff22;
-        margin-bottom: .5em; }
+        color: #19974b;
+        margin-bottom: .5em;
+        font-weight: bold; }
     .footer .first-tap .ret {
       text-align: center;
       padding-top: 2em; }
@@ -230,3 +238,35 @@
     width: 100%;
     height: 1em;
     margin-top: 1em; }
+
+.proteger h2 {
+  text-align: center;
+  color: #1078ad;
+  padding-top: 2em; }
+
+.proteger main {
+  display: grid;
+  grid-template-columns: repeat(3, 33.33%);
+  text-align: center;
+  margin-top: 1em; }
+  .proteger main div {
+    padding: 2em; }
+    .proteger main div img {
+      padding: 1em; }
+    .proteger main div p {
+      color: #1078ad; }
+  .proteger main .last-calque {
+    grid-column: span 3; }
+
+* {
+  font-family: 'Cairo', sans-serif !important; }
+
+.Informations {
+  text-align: center;
+  background-color: blue; }
+  .Informations h2 {
+    padding: 1em 0; }
+  .Informations p {
+    padding: 1em 0; }
+  .Informations button {
+    margin: 1em 0; }
