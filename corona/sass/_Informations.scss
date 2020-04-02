@@ -1,12 +1,10 @@
 *{
     font-family: 'Cairo', sans-serif !important;
-
-
-
 }
 .Informations {
     text-align: center;
-    background-color: blue;
+    background-color: #b8d7e7;
+    color: #1078ad;
     h2{
         padding:1em 0;
     }
@@ -14,6 +12,15 @@
         padding:1em 0;
     }
     button{
-        margin:1em 0;
+        background-image: url("../dist/Assets/png/button-bg.png");
+        margin: 2em 4em;
+        padding: 1em 4em;
+        border: none;
+        
+
+        a{
+            color: white;
+            text-decoration: none;
+        }
     }
 }
