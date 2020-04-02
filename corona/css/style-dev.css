@@ -254,9 +254,23 @@
     .proteger main div img {
       padding: 1em; }
     .proteger main div p {
-      color: #1078ad; }
+      color: #1078ad;
+      width: 60%;
+      text-align: center;
+      left: 50%;
+      position: relative;
+      -webkit-transform: translate(-50%);
+              transform: translate(-50%);
+      font-weight: bolder; }
   .proteger main .last-calque {
     grid-column: span 3; }
+
+@media only screen and (max-width: 600px) {
+  .proteger main {
+    display: grid;
+    grid-template-columns: repeat(2, 50%); }
+    .proteger main .last-calque {
+      grid-column: span 2; } }
 
 * {
   font-family: 'Cairo', sans-serif !important; }
