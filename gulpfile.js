@@ -13,7 +13,7 @@ gulp.task('css', function () {
         .pipe(sass())
         .pipe(rename({basename:"style-dev"}))
         .pipe(autoprefixer('last 2 version'))
-        .pipe(dest('dist/css'))
+        .pipe(dest('corona/css'))
 });
 
 //compressed
