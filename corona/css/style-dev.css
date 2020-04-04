@@ -14,7 +14,9 @@
     padding-left: 3em;
     color: #1078ad; }
   .nav-bar .right-nav ul {
-    float: right;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -29,6 +31,8 @@
         .nav-bar .right-nav ul li a:active {
           color: #1078ad;
           font-weight: bold; }
+      .nav-bar .right-nav ul li img {
+        border-radius: 50%; }
 
 .msg-yellow {
   background: #f4cf1b;
