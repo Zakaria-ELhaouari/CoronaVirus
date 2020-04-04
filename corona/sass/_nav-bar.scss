@@ -18,7 +18,7 @@
     }
     .right-nav{
         ul{
-            float: right;
+            justify-content:flex-end;
             display: flex;
             padding-top: 1.5em;
             padding-right: 3em;
@@ -32,6 +32,9 @@
                         color: #1078ad;
                         font-weight: bold;
                       }
+                }
+                img{
+                    border-radius: 50%;
                 }
             }
         }
