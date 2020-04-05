@@ -8,7 +8,7 @@
     background-size: cover;
     height: 4em;
     display: grid;
-    grid-template-columns:repeat(2 , 50%) ;
+    grid-template-columns: repeat(2, 50%);
     .logo {
         p {
             padding-top: 1.5em;
@@ -16,25 +16,76 @@
             color: #1078ad;
         }
     }
-    .right-nav{
-        ul{
-            justify-content:flex-end;
+    .right-nav {
+        ul {
+            justify-content: flex-end;
             display: flex;
             padding-top: 1.5em;
             padding-right: 3em;
             list-style: none;
-            li{
-                padding: 0 1em ;
-                a{
+            li {
+                padding: 0 1em;
+                a {
                     text-decoration: none;
                     color: black;
                     &:active {
                         color: #1078ad;
                         font-weight: bold;
-                      }
+                    }
                 }
-                img{
+                img {
                     border-radius: 50%;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .nav-bar {
+        grid-template-columns: repeat(1, 100%);
+        display: flex;
+        width: 100%;
+        z-index: 18;
+        .right-nav {
+            .humber {
+                position: absolute;
+                left: 90%;
+                top: 7%;
+                transform: translate(-15% ,-90%);
+                cursor: pointer;
+                .line {
+                    width: 30px;
+                    height: 3px;
+                    background-color: white;
+                    margin: 5px;
+                }
+            }
+            ul {
+                background-color: red;
+                width: 100vh;
+                height: 100vh;
+                flex-direction: column;
+                clip-path: circle(50px at 90% -10%);
+                transition: all 1s ease-out;
+                .open{
+                    clip-path: circle(1000px at 90% -10%);
+                }
+                li {
+                    padding: 0 1em;
+                    margin: auto 25%;
+
+                    a {
+                        text-decoration: none;
+                        color: black;
+                        &:active {
+                            color: #1078ad;
+                            font-weight: bold;
+                        }
+                    }
+                    img {
+                        border-radius: 50%;
+                    }
                 }
             }
         }
