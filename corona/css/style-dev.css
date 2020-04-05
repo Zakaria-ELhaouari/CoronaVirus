@@ -34,6 +34,53 @@
       .nav-bar .right-nav ul li img {
         border-radius: 50%; }
 
+@media only screen and (max-width: 800px) {
+  .nav-bar {
+    grid-template-columns: repeat(1, 100%);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    z-index: 18; }
+    .nav-bar .right-nav .humber {
+      position: absolute;
+      left: 90%;
+      top: 7%;
+      -webkit-transform: translate(-15%, -90%);
+              transform: translate(-15%, -90%);
+      cursor: pointer; }
+      .nav-bar .right-nav .humber .line {
+        width: 30px;
+        height: 3px;
+        background-color: white;
+        margin: 5px; }
+    .nav-bar .right-nav ul {
+      background-color: red;
+      width: 100vh;
+      height: 100vh;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-clip-path: circle(50px at 90% -10%);
+              clip-path: circle(50px at 90% -10%);
+      -webkit-transition: all 1s ease-out;
+      transition: all 1s ease-out; }
+      .nav-bar .right-nav ul .open {
+        -webkit-clip-path: circle(1000px at 90% -10%);
+                clip-path: circle(1000px at 90% -10%); }
+      .nav-bar .right-nav ul li {
+        padding: 0 1em;
+        margin: auto 25%; }
+        .nav-bar .right-nav ul li a {
+          text-decoration: none;
+          color: black; }
+          .nav-bar .right-nav ul li a:active {
+            color: #1078ad;
+            font-weight: bold; }
+        .nav-bar .right-nav ul li img {
+          border-radius: 50%; } }
+
 .msg-yellow {
   background: #f4cf1b;
   width: 100%;
