@@ -43,16 +43,14 @@
 
 @media only screen and (max-width: 800px) {
     .nav-bar {
-        grid-template-columns: repeat(1, 100%);
-        display: flex;
-        width: 100%;
-        z-index: 18;
         .right-nav {
             .humber {
                 position: absolute;
+                position: fixed;
                 left: 90%;
                 top: 7%;
-                transform: translate(-15% ,-90%);
+                transform: translate(-15%, -90%);
+                z-index: 4;
                 cursor: pointer;
                 .line {
                     width: 30px;
@@ -62,20 +60,20 @@
                 }
             }
             ul {
-                background-color: red;
-                width: 100vh;
-                height: 100vh;
+                position: fixed;
+                background-color: blue;
+                width: 100%;
+                height: 100%;
+                z-index: 3;
                 flex-direction: column;
-                clip-path: circle(50px at 90% -10%);
+                clip-path: circle(100px at 90% -10%);
                 transition: all 1s ease-out;
-                .open{
-                    clip-path: circle(1000px at 90% -10%);
-                }
+                
                 li {
-                    padding: 0 1em;
                     margin: auto 25%;
-
+                    z-index: 6;
                     a {
+                        color: white !important;
                         text-decoration: none;
                         color: black;
                         &:active {
@@ -90,4 +88,8 @@
             }
         }
     }
+}
+
+.open{
+    clip-path: circle(1100px at 90% -10%) !important;
 }
