@@ -1,64 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Cairo:300,400,600,700,900&display=swap&subset=arabic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cairo:300,400,600,700,900&display=swap&subset=arabic"
+        rel="stylesheet">
     <link rel="stylesheet" href="../css/style-dev.css">
     <title>Document</title>
 </head>
+
 <body>
     <section class="nav-bar">
         <div class="logo">
             <p>LOGO</p>
         </div>
         <div class="right-nav">
-            <div  class="humber">
+            <div class="humber">
                 <div class="line"></div>
                 <div class="line"></div>
                 <div class="line"></div>
             </div>
             <ul class="nav-line open">
-                <li><a href="conseil.html">Conseil</a></li>
-                <li><a href="index.html">Acceuil</a></li>
+                <li class="btn-conseil"><a href="#">Conseil</a></li>
+                <li class="btn-acceuil"><a href="#">Acceuil</a></li>
                 <li><img src="Assets/png/morocco-flag-icon-32.png" alt="langue"></li>
             </ul>
         </div>
     </section>
+    <div class="acceuile-page">
+        <section class="msg-yellow">
+            <div class="msg">
+                <h2 class="msg__title">LA DERNIÈRE INFO MÉDICALE</h2>
+                <p class="msg__info">
+                    "La prise d'anti-inflammatoires (ibuprofène, cortisone ...) pourrait être un facteur d'aggravation
+                    de
+                    l’infection. En cas de fièvre, prenez du paracétamol." <br>
+                    "N'arrêtez pas votre traitement ! Consultez votre médecin ou votre pharmacien."
+                </p>
+            </div>
+        </section>
 
-    <section class="msg-yellow">
-        <div class="msg">
-            <h2 class="msg__title">LA DERNIÈRE INFO MÉDICALE</h2>
-            <p class="msg__info">
-                "La prise d'anti-inflammatoires (ibuprofène, cortisone ...) pourrait être un facteur d'aggravation de
-                l’infection. En cas de fièvre, prenez du paracétamol." <br>
-                "N'arrêtez pas votre traitement ! Consultez votre médecin ou votre pharmacien."
-            </p>
-        </div>
-    </section>
+        <section class="header">
+            <div class="infHead">
+                <h2 class="infHead__title">Vous pensez avoir été exposé au Coronavirus COVID-19 et vous avez des
+                    symptômes ?
+                </h2>
+                <img src="../dist/Assets/png/élément-5.png" alt="">
+                <p class="infHead__ques">
+                    Je reste vigilant ?
+                    <br>
+                    Je programme une téléconsultation ?
+                    <br>
+                    J'appelle le 141 ?
+                    <br>
+                    Faites le test pour répondre en citoyen éclairé selon vos symptômes.
+                </p>
+                <button>Démarrer le test</button>
+            </div>
 
-    <section class="header">
-        <div class="infHead">
-            <h2 class="infHead__title">Vous pensez avoir été exposé au Coronavirus COVID-19 et vous avez des symptômes ?
-            </h2>
-            <img src="../dist/Assets/png/élément-5.png" alt="">
-            <p class="infHead__ques">
-                Je reste vigilant ?
-                <br>
-                Je programme une téléconsultation ?
-                <br>
-                J'appelle le 141 ?
-                <br>
-                Faites le test pour répondre en citoyen éclairé selon vos symptômes.
-            </p>
-            <button>Démarrer le test</button>
-        </div>
-
-        <div class="imgHead">
-            <img src="../dist/Assets/png/doctore.png" alt="">
-        </div>
-    </section>
-
+            <div class="imgHead">
+                <img src="../dist/Assets/png/doctore.png" alt="">
+            </div>
+        </section>
+    </div>
+    <div class="conseil-page ">
+        <section class="proteger">
+            <h2>Comment se protéger et protéger les autres au quotidien ?</h2>
+            <main>
+                <div>
+                    <img src="Assets/SVG/Calque -5.svg" alt="">
+                    <p>Saluez sans serrer la main, n'embrassez personne</p>
+                </div>
+                <div>
+                    <img src="Assets/SVG/Calque -4.svg" alt="">
+                    <p>Lavez-vous très régulièrement les mains</p>
+                </div>
+                <div>
+                    <img src="Assets/SVG/Calque -3.svg" alt="">
+                    <p>Portez un masque si vous êtes malade</p>
+                </div>
+                <div>
+                    <img src="Assets/SVG/cough-svgrepo-com.svg" alt="">
+                    <p>Toussez ou éternuez dans votre coude ou dans un mouchoir</p>
+                </div>
+                <div>
+                    <img src="Assets/SVG/Fichier -3.svg" alt="">
+                    <p>Ne touchez pas vos yeux, votre bouche ou votre nez</p>
+                </div>
+                <div>
+                    <img src="Assets/SVG/Calque -7.svg" alt="">
+                    <p>Évitez les rassemblements</p>
+                </div>
+                <div class="last-calque">
+                    <img src="Assets/SVG/icon-house.svg" alt="">
+                    <p>Restez chez vous, évitez tout contact avec les autres</p>
+                </div>
+            </main>
+        </section>
+    
+        <section class="Informations">
+            <h2>Informations</h2>
+            <p>Obtenez des informations à jour en provenance du Ministère de la Santé</p>
+            <button><a href="http://www.covidmaroc.ma/Pages/AccueilAR.aspx">www.covidmaroc.ma</a></button>
+        </section>
+    </div>
     <section class="symptome">
         <h2>Quels sont les symptômes à surveiller ?</h2>
         <main>
@@ -92,7 +138,8 @@
                     <li>Ne rendez pas visite aux personnes fragiles.</li>
                     <li>Restez chez vous.</li>
                     <li>Respectez les mesures barrière (lavage de main, masque).</li>
-                    <li>Surveillez vos symptômes, l’évolution de votre température corporelle et recherchez un avis médical.</li>
+                    <li>Surveillez vos symptômes, l’évolution de votre température corporelle et recherchez un avis
+                        médical.</li>
                 </ul>
             </div>
             <div class="call">
@@ -135,6 +182,7 @@
         </main>
     </section>
     <script src="js/animation.js"></script>
+    <script src="js/noLeaod.js"></script>
 </body>
 
 </html>
