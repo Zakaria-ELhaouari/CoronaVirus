@@ -1,11 +1,21 @@
-const humberger = document.getElementsByClassName("humber");
-const list = document.querySelectorAll(".nav-line");
-const links = document.querySelectorAll("nav-line li");
+const hamburger = document.querySelector(".humber");
+const navLinks = document.querySelector(".nav-line");
+const links = document.querySelectorAll(".nav-line li");
 
-// humberger.addEventListener("click",() => {
-//     list.classList.toggle("open")
+hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("open");
+      links.forEach(link => {
+    link.classList.toggle("fade");
+  });
+});
+
+// const hamburger = document.querySelector(".humber");
+// const navLinks = document.querySelector(".nav-line");
+// const links = document.querySelectorAll(".nav-line li");
+
+// hamburger.addEventListener("click", () => {
+//   navLinks.classList.toggle("open");
+//   links.forEach(link => {
+//     link.classList.toggle("fade");
+//   });
 // });
-
-function humberger(){
-    list.classList.toggle("open")
-}
