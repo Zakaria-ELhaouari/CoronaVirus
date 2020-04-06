@@ -341,3 +341,16 @@
     .Informations button a {
       color: white;
       text-decoration: none; }
+
+.Preambule {
+  text-align: center;
+  background-color: #e9ecef;
+  margin: 1em 2em;
+  padding: 1em; }
+  .Preambule h2 {
+    color: #1078ad; }
+  .Preambule p {
+    padding: 1em 0; }
+
+.companent {
+  display: none; }
