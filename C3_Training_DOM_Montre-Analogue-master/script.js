@@ -30,7 +30,7 @@ function demarrerLaMontre() {
     const seconde = date.getSeconds();
     const dugreSeconde = seconde * 6;
     const dugreMinute = minute  * 6;
-    const dugreHaours = haours * 30;
+    const dugreHaours = haours * 15;
     AIGUILLEHR.style.transform = `rotate(${dugreHaours}deg)`;
     AIGUILLEMIN.style.transform = `rotate(${dugreMinute}deg)`;
     AIGUILLESEC.style.transform = `rotate(${dugreSeconde}deg)`;
