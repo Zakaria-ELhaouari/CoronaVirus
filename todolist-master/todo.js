@@ -6,7 +6,6 @@ const gPop = document.querySelector('.popup-wrapper');
 const btn = document.querySelector('.btn');
 const search = document.querySelector('.search input');
 gPop.style.display = "none";
-const loool = document.querySelector('#kola')
 // console.log(addForm);
 
 
@@ -60,15 +59,18 @@ const generateTemp = todo => {
              <i class="fas fa-trash delete"></i>
             </li>
    `;
+   
    // list.innerHTML = html;
-   const inputAdd = Array.from(addForm).filter(element => {
-      if (element.name === 'add') {
-         return element;
-      }
-   });
+   // const inputAdd = Array.from(addForm).filter(element => {
+   //    if (element.name === 'add') {
+   //       return element;
+   //    }
+   // });
+   
    list.innerHTML += html;
-   return inputAdd;
+   
 };
+
 
 /* function pour controller l'evenement et pour ne pas etre repeté à chaque clique */
 function onetime(node, type, callback) {
@@ -100,8 +102,9 @@ function handler(e) {
 
 //Eventlistner Add TODOS
 btn.addEventListener('click', e => {
-   const hdui = addForm.inputAdd.value;
-   generateTemp(hdui);
+   e.preventDefault();
+   const add = addForm.added.value;
+   generateTemp(add);
 
 });
 
@@ -111,8 +114,15 @@ btn.addEventListener('click', e => {
 
 /*************Deleting  TO DO**************/
 list.addEventListener('click', e => {
+   const li = document.querySelector("li")
+   li.remove(); 
 
 });
+// const delet = document.querySelector('.delete');
+// delet.addEventListener('click', e => {
+//    delet.removeChild();
+
+// });
 
 /************* Fin Deleting  TO DO**************/
 
