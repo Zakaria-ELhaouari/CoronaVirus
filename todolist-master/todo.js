@@ -60,7 +60,7 @@ const generateTemp = todo => {
             </li>
    `;
    list.innerHTML += html;
-   
+
 };
 
 
@@ -93,19 +93,18 @@ function handler(e) {
 /************* Adding TO DO**************/
 
 //Eventlistner Add TODOS
-btn.addEventListener('click', e => { 
+btn.addEventListener('click', e => {
    e.preventDefault();
    const add = addForm.added.value;
-   let number=3;
-   if(add == ""){
+   let number = 3;
+   if (add == "") {
       create();
       start(number);
-      gPop.style.display = "visible";
-      
-   }
-   else{
-      
-   generateTemp(add);
+      popup.style.display = "visible";
+
+   }else {
+      generateTemp(add);
+      localStorage.getItem(add);
    }
 });
 
@@ -120,7 +119,7 @@ list.addEventListener('click', e => {
    // console.log(li);
    // const arrLi = Array.from(li);
    // li.remove();
-   const li = document.querySelector("i");   
+   const li = document.querySelector("i");
    e.target.parentElement.remove();
 });
 // const delet = document.querySelector('.delete');
@@ -146,7 +145,7 @@ list.addEventListener('click', e => {
 const retrieve = (term) => {
    const allLi = document.querySelectorAll("li");
    console.log(allLi);
-   allLi.forEach(element => 
+   allLi.forEach(element =>
       console.log(element));
 
    //function pour faire un filtre i
