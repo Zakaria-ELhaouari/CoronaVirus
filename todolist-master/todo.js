@@ -59,14 +59,6 @@ const generateTemp = todo => {
              <i class="fas fa-trash delete"></i>
             </li>
    `;
-   
-   // list.innerHTML = html;
-   // const inputAdd = Array.from(addForm).filter(element => {
-   //    if (element.name === 'add') {
-   //       return element;
-   //    }
-   // });
-   
    list.innerHTML += html;
    
 };
@@ -101,11 +93,20 @@ function handler(e) {
 /************* Adding TO DO**************/
 
 //Eventlistner Add TODOS
-btn.addEventListener('click', e => {
+btn.addEventListener('click', e => { 
    e.preventDefault();
    const add = addForm.added.value;
+   let number=3;
+   if(add == ""){
+      create();
+      start(number);
+      gPop.style.display = "visible";
+      
+   }
+   else{
+      
    generateTemp(add);
-
+   }
 });
 
 /************* Fin Adding TO DO**************/
@@ -114,9 +115,13 @@ btn.addEventListener('click', e => {
 
 /*************Deleting  TO DO**************/
 list.addEventListener('click', e => {
-   const li = document.querySelector("li")
-   li.remove(); 
-
+   // const li = document.querySelectorAll("li");
+   // console.log(typeof(li));
+   // console.log(li);
+   // const arrLi = Array.from(li);
+   // li.remove();
+   const li = document.querySelector("i");   
+   e.target.parentElement.remove();
 });
 // const delet = document.querySelector('.delete');
 // delet.addEventListener('click', e => {
@@ -139,6 +144,10 @@ list.addEventListener('click', e => {
 
 
 const retrieve = (term) => {
+   const allLi = document.querySelectorAll("li");
+   console.log(allLi);
+   allLi.forEach(element => 
+      console.log(element));
 
    //function pour faire un filtre i
 };
@@ -147,7 +156,7 @@ const retrieve = (term) => {
 //evenement de recherche des mots clés 
 search.addEventListener('keyup', () => {
 
-
+   retrieve();
 })
 
 /*************************************Fin SEARCH ITEM********************************************/
