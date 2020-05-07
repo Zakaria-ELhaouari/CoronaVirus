@@ -342,7 +342,7 @@
       color: white;
       text-decoration: none; }
 
-.Preambule {
+.test-start .Preambule {
   text-align: center;
   background-color: #e9ecef;
   margin: 1em 2em;
@@ -352,10 +352,23 @@
   position: relative;
   -webkit-transform: translate(-50%);
           transform: translate(-50%); }
-  .Preambule h2 {
+  .test-start .Preambule h2 {
     color: #1078ad; }
-  .Preambule p {
+  .test-start .Preambule p {
     padding: 1em 0; }
+
+.test-start .start {
+  -webkit-transform: translateX(150%);
+          transform: translateX(150%);
+  padding: 1em 11em;
+  margin-top: 2em;
+  background-color: #cfe4ef;
+  border: solid 2px #1078ad;
+  color: #1078ad;
+  border-radius: 0.6em; }
+  .test-start .start:hover {
+    background-color: #1078ad;
+    color: white; }
 
 .companent {
   display: none; }
