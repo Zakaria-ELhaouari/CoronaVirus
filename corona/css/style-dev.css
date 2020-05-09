@@ -358,8 +358,10 @@
     padding: 1em 0; }
 
 .test-start .start {
-  -webkit-transform: translateX(150%);
-          transform: translateX(150%);
+  left: 50%;
+  position: relative;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   padding: 1em 11em;
   margin-top: 2em;
   background-color: #cfe4ef;
@@ -369,6 +371,71 @@
   .test-start .start:hover {
     background-color: #1078ad;
     color: white; }
+
+.test-start .steps {
+  width: 70%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
+  .test-start .steps .shadow {
+    background-color: red; }
+  .test-start .steps img {
+    width: 3em;
+    left: 50%;
+    position: relative;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%); }
+  .test-start .steps h2 {
+    left: 50%;
+    position: relative;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    color: #1273eb; }
+
+.test {
+  background-color: white;
+  width: 70%;
+  margin: auto;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  padding: 1em;
+  margin-top: .6em;
+  border-radius: 10px; }
+  .test .questionnes {
+    text-align: center;
+    font-weight: 3em;
+    margin: 10em 3em; }
+    .test .questionnes .choix {
+      margin: 1em;
+      padding: 2em 2em;
+      background-color: white;
+      border: solid 2px #1078ad; }
+      .test .questionnes .choix:hover {
+        color: yellow;
+        background-color: #1078ad; }
+    .test .questionnes p {
+      font-size: 1.7em;
+      font-weight: 700;
+      width: 70%;
+      margin: auto;
+      color: #787878; }
+  .test .nextPrecedent .btnSteper {
+    border: solid 2px #1078ad;
+    border-radius: 10px;
+    background-color: #cfe4ef;
+    padding: .7em 3em;
+    color: #1078ad;
+    margin: 0 3em; }
+    .test .nextPrecedent .btnSteper:hover {
+      background-color: #1078ad;
+      color: white; }
+  .test .nextPrecedent .next {
+    float: right; }
+
+.remove {
+  display: none; }
 
 .companent {
   display: none; }
