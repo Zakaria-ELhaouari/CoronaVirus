@@ -11,6 +11,8 @@ const fauxChoix = document.querySelectorAll(".faux");
 const btnResule = document.querySelector(".rslBtn");
 const questionProgres = document.querySelector(".progres");
 const resultFinal = document.querySelector(".rsltMsg");
+const answers = document.querySelectorAll(".choix");
+console.log(answers);
 // console.log(questionnes);
 
 // console.log(stepers);
@@ -24,7 +26,7 @@ function firstStep() {
     stepers[1].classList.add("shadow");
     preambule.style.display = "none";
     contentQuestion.classList.remove("hide");
-    questionnes.classList.add('remove1');
+
     // presedentButton();
 }
 // for( i=0; i < questionnes.length;i++ ){
@@ -182,7 +184,7 @@ next.addEventListener("click", () => {
     i++;
     progress(i - 1)
 })
-console.log(i);
+// console.log(i);
 precedent.addEventListener("click", () => {
     questionnes[i].classList.add('remove');
     questionnes[i - 1].classList.remove('remove');
@@ -228,16 +230,67 @@ function progress(number) {
 // }
 
 // jikko()
-const answer = [];
-let a = 0;
-vrais[a].addEventListener('click', () => {
-    console.log(vrais);
-    var Answers = answer.push('vrais')
-    console.log(Answers);
-    a++;
-});
+// const answer = [];
+// let a = 0;
+// vraisChoix[a].addEventListener('click', () => {
+//     // console.log(Answers);
+//     // function getCheckedValue() {
+//     //     for (var i = 0; i < vraisChoix.length; i++) {
+//     //         if (vraisChoix[i].click()) {
+//     //             var Answers = answer.push('vrais');
+//     //             answer.push(vraisChoix[i].textContent)
+//     //         }
+//     //     }
+//     // }
+//     // return getCheckedValue()
+//     if(i<=vraisChoix.length){
+//         var Answers = answer.push('vrais');
+//         answer.push(vraisChoix[i].textContent)
+//     }
+// });
 
-console.log(answerAll);
+contentQuestion.addEventListener('click', () => {
+        var checked = [];
+        for (var i = 0; i < answers.length; i++) {
+
+            if (answers[i].value === "true") {
+
+                checked.push(answers[i].value)
+            }
+        }    
+})
+// console.log(answerAll);
+// vraisChoix.addEventListener("click", e => {
+//     e.preventDefault();
+//     function getCheckedValue(radios) {
+
+//         var checked = [];
+
+//         for (var i = 0; i < vraisChoix.length; i++) {
+
+//             if (vraisChoix[i].click()) {
+
+//                 checked.push(vraisChoix[i].textContent)
+//             }
+//         }
+//         return checked.length > 0 ? checked : null;
+//     }
+//     var Answers = getCheckedValue(radios);
+//     const correctAnswers = [contentQuestion.answer.textContent, 'OUI', 'OUI', 'OUI', 'OUI'];
+//     Answers.unshift(n);
+//     console.log(Answers);
+//     let score = 0;
+//     Answers.forEach((answ, index) => {
+
+//         if (answ === correctAnswers[index] && answ !== '') {
+
+//             score ++;
+
+//         } 
+//     });
+// })
+// console.log(getCheckedValue())
+
 
 // // function result(){
 // //     if(answer.length === questionnes.length){
