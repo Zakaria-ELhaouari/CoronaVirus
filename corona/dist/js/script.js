@@ -168,29 +168,29 @@ let i = 1;
 next.addEventListener("click", () => {
     if (i === 0) {
         questionnes[i].classList.remove('remove');
-    } else if (i === questionnes.length){
-        next.style.display="none";
-        precedent.style.display="none";
+    } else if (i === questionnes.length) {
+        next.style.display = "none";
+        precedent.style.display = "none";
         btnResule.classList.remove('hide');
-    }else {
+    } else {
         questionnes[i].classList.remove('remove');
         questionnes[i - 1].classList.add('remove');
         precedent.classList.remove('hide');
 
     }
-   
+
     i++;
-    progress(i-1) 
+    progress(i - 1)
 })
 console.log(i);
 precedent.addEventListener("click", () => {
-        questionnes[i].classList.add('remove');
-        questionnes[i - 1].classList.remove('remove');
+    questionnes[i].classList.add('remove');
+    questionnes[i - 1].classList.remove('remove');
     i--;
-    if(i === 0){
+    if (i === 0) {
         precedent.classList.add('hide');
     }
-    progress(i-1) 
+    progress(i - 1)
 })
 
 function progress(number) {
@@ -228,23 +228,16 @@ function progress(number) {
 // }
 
 // jikko()
-// const answer = [];
-// let a = 0;
-// vraisChoix[a].addEventListener('click', () => {
-//     // console.log(vraisChoix[a]);
-//     if (a === 0) {
-//         vraisChoix[a].classList.add('yaya');
-//     } else {
-//         vraisChoix[a].classList.add('yaya');
-//     }
-//     // console.log(Answers);
-//     a++;
-//     // vraisChoix[a].classList.add('yaya');
-//     // a++;
-// });
+const answer = [];
+let a = 0;
+vrais[a].addEventListener('click', () => {
+    console.log(vrais);
+    var Answers = answer.push('vrais')
+    console.log(Answers);
+    a++;
+});
 
-// console.log(a);
-
+console.log(answerAll);
 
 // // function result(){
 // //     if(answer.length === questionnes.length){
@@ -268,11 +261,11 @@ function progress(number) {
 //     vraisChoix[a].classList.add('yaya');
 // }, false);
 
-btnResule.addEventListener("click" , ()=>{
+btnResule.addEventListener("click", () => {
     stepers[1].classList.remove("shadow");
     stepers[2].classList.add("shadow");
-        contentQuestion.classList.add("hide");
-        resultFinal.classList.remove("hide");
-        resultFinal.innerHTML=`<div>machi korona</div>`
-    
+    contentQuestion.classList.add("hide");
+    resultFinal.classList.remove("hide");
+    resultFinal.innerHTML = `<div>machi korona</div>`
+
 })
