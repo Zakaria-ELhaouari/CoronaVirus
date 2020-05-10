@@ -103,8 +103,42 @@
             float: right;
         }
     }
-}
 
+    .btnResule{
+        .rslBtn{
+            border: solid 2px #1078ad;
+            border-radius: 10px;
+            background-color: #cfe4ef;
+            padding: .7em 3em;
+            color: #1078ad;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            &:hover{
+                background-color: #1078ad;
+                color: white;
+            }
+        }
+    }
+}
 .remove{
     display: none;
+}
+.hide{
+    display: none;
+}
+
+.w3-container{
+    width: 0%;
+}
+
+.rsltMsg{
+    text-align: center;
+        background-color: #e9ecef;
+        margin: 1em 2em;
+        padding: 1em;
+        width: 60%;
+        left: 50%;
+        position: relative;
+        transform: translate(-50%);
 }
