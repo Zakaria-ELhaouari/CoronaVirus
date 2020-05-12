@@ -166,7 +166,7 @@ function firstStep() {
 //     }
 // }
 
-let i = 1;
+let i = 0;
 next.addEventListener("click", () => {
     if (i === 0) {
         questionnes[i].classList.remove('remove');
@@ -178,10 +178,10 @@ next.addEventListener("click", () => {
         questionnes[i].classList.remove('remove');
         questionnes[i - 1].classList.add('remove');
         precedent.classList.remove('hide');
-
     }
 
     i++;
+    hejd();
     progress(i - 1)
 })
 // console.log(i);
@@ -249,16 +249,19 @@ function progress(number) {
 //     }
 // });
 
-contentQuestion.addEventListener('click', () => {
-        var checked = [];
-        for (var i = 0; i < answers.length; i++) {
-
-            if (answers[i].value === "true") {
-
-                checked.push(answers[i].value)
-            }
-        }    
-})
+function hejd(){
+    const checked = [];
+    vraisChoix[i].addEventListener("click", () =>{
+        if (vraisChoix[i].textContent === "OUI") {
+            // const lokkkl = checked.push("jdjdjd")
+            // console.log(lokkkl);
+            console.log('jddkjdk')
+        }
+        
+    })
+  
+    console.log(i);
+}
 // console.log(answerAll);
 // vraisChoix.addEventListener("click", e => {
 //     e.preventDefault();
