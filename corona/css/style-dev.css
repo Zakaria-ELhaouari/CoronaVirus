@@ -381,7 +381,8 @@
   -ms-flex-pack: distribute;
       justify-content: space-around; }
   .test-start .steps .shadow {
-    background-color: red; }
+    -webkit-box-shadow: -12px 17px 97px 11px #cccf00;
+            box-shadow: -12px 17px 97px 11px #cccf00; }
   .test-start .steps img {
     width: 3em;
     left: 50%;
