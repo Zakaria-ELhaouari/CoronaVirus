@@ -6,7 +6,7 @@ const questionnes = document.querySelectorAll(".questionnes");
 const next = document.querySelector(".next");
 const precedent = document.querySelector(".precedent");
 const barProgress = document.querySelector(".w3-blue");
-const vraisChoix = document.querySelectorAll(".vrais");
+
 const fauxChoix = document.querySelectorAll(".faux");
 const btnResule = document.querySelector(".rslBtn");
 const questionProgres = document.querySelector(".progres");
@@ -170,6 +170,7 @@ let i = 0;
 next.addEventListener("click", () => {
     if (i === 0) {
         questionnes[i].classList.remove('remove');
+        showResult();
     } else if (i === questionnes.length) {
         next.style.display = "none";
         precedent.style.display = "none";
@@ -178,11 +179,12 @@ next.addEventListener("click", () => {
         questionnes[i].classList.remove('remove');
         questionnes[i - 1].classList.add('remove');
         precedent.classList.remove('hide');
+        showResult();
     }
 
     i++;
-    hejd();
-    progress(i - 1)
+
+    progress(i)
 })
 // console.log(i);
 precedent.addEventListener("click", () => {
@@ -202,13 +204,41 @@ function progress(number) {
 
 }
 
+// function hejd(){
+//     const checked = [];
+//     vraisChoix[i].addEventListener("click", () =>{
+//         if (vraisChoix[i].textContent === "OUI") {
+//             // const lokkkl = checked.push("jdjdjd")
+//             // console.log(lokkkl);
+//             console.log('jddkjdk')
+//         }
 
-// function barProgress(number) {
-
-//     const currentNmber = number + 1
-//     barProgress.style.width = `calc(${currentNmber} * calc(100% / 22))`
-
+//     })
+//     vraisChoix[i]
+//     console.log(i);
 // }
+var all = [];
+var stockResult = [];
+function showResult() {
+    vraisChoix = document.querySelectorAll(".vrais");
+    vraisChoix[i].addEventListener("click", () => {
+        var rslt = all.push("");
+        stockResult.push(rslt);
+        // console.log('jddkjdk')
+        // console.log(i);
+        // console.log(all);
+        // console.log(hdhdhd);
+        // var obj = "ssss";
+        // var newData = [...all, obj];
+        // jjd.push(newData);
+        // console.log(newData);
+        // console.log(jjd);
+        console.log(stockResult);
+        console.log(rslt);
+        // return newData;
+    });
+    
+}
 // const anserStock = [];
 // vraisChoix.addEventListener('click', () =>{
 //     anserStock.push(vrais)
@@ -249,19 +279,7 @@ function progress(number) {
 //     }
 // });
 
-function hejd(){
-    const checked = [];
-    vraisChoix[i].addEventListener("click", () =>{
-        if (vraisChoix[i].textContent === "OUI") {
-            // const lokkkl = checked.push("jdjdjd")
-            // console.log(lokkkl);
-            console.log('jddkjdk')
-        }
-        
-    })
-  
-    console.log(i);
-}
+
 // console.log(answerAll);
 // vraisChoix.addEventListener("click", e => {
 //     e.preventDefault();
@@ -322,6 +340,11 @@ btnResule.addEventListener("click", () => {
     stepers[2].classList.add("shadow");
     contentQuestion.classList.add("hide");
     resultFinal.classList.remove("hide");
-    resultFinal.innerHTML = `<div>machi korona</div>`
-
+    if(stockResult.length === questionnes.length){
+        resultFinal.innerHTML = `<div>machi korona</div>`
+    }else if(stockResult.length >= questionnes.length/2){
+        resultFinal.innerHTML = `<div> korona</div>`
+    }else if(stockResult.length < questionnes.length/2){
+        resultFinal.innerHTML = `<div> hhhdhjdj</div>`
+    }
 })
