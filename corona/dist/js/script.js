@@ -1,5 +1,6 @@
 const start = document.querySelector(".start");
-const stepers = document.querySelectorAll(".stepers");
+// const stepers = document.querySelectorAll(".stepers");
+const stepers = document.querySelectorAll(".stepper h1");
 const preambule = document.querySelector(".Preambule");
 const contentQuestion = document.querySelector(".test");
 const questionnes = document.querySelectorAll(".questionnes");
@@ -22,12 +23,10 @@ start.addEventListener("click", firstStep);
 
 function firstStep() {
     start.style.display = "none";
-    stepers[0].classList.remove("shadow");
-    stepers[1].classList.add("shadow");
+    stepers[0].classList.remove("active");
+    stepers[1].classList.add("active");
     preambule.style.display = "none";
     contentQuestion.classList.remove("hide");
-
-    // presedentButton();
 }
 // for( i=0; i < questionnes.length;i++ ){
 //     next.addEventListener("click", () => {
@@ -183,8 +182,7 @@ next.addEventListener("click", () => {
     }
 
     i++;
-
-    progress(i)
+    progress(i-1)
 })
 // console.log(i);
 precedent.addEventListener("click", () => {
@@ -217,10 +215,10 @@ function progress(number) {
 //     vraisChoix[i]
 //     console.log(i);
 // }
+const vraisChoix = document.querySelectorAll(".vrais");
 var all = [];
 var stockResult = [];
 function showResult() {
-    vraisChoix = document.querySelectorAll(".vrais");
     vraisChoix[i].addEventListener("click", () => {
         var rslt = all.push("");
         stockResult.push(rslt);
@@ -336,8 +334,8 @@ function showResult() {
 // }, false);
 
 btnResule.addEventListener("click", () => {
-    stepers[1].classList.remove("shadow");
-    stepers[2].classList.add("shadow");
+    stepers[1].classList.remove("active");
+    stepers[2].classList.add("active");
     contentQuestion.classList.add("hide");
     resultFinal.classList.remove("hide");
     if(stockResult.length === questionnes.length){
