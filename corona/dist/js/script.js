@@ -11,7 +11,7 @@ const barProgress = document.querySelector(".w3-blue");
 const fauxChoix = document.querySelectorAll(".faux");
 const btnResule = document.querySelector(".rslBtn");
 const questionProgres = document.querySelector(".progres");
-const resultFinal = document.querySelector(".rsltMsg");
+const resultFinal = document.querySelector(".Preambule p");
 const answers = document.querySelectorAll(".choix");
 console.log(answers);
 // console.log(questionnes);
@@ -175,6 +175,7 @@ next.addEventListener("click", () => {
     } else if (i === questionnes.length) {
         next.style.display = "none";
         precedent.style.display = "none";
+        // questionnes[i].classList.add('remove');
         btnResule.classList.remove('hide');
     } else {
         questionnes[i].classList.remove('remove');
@@ -200,7 +201,7 @@ precedent.addEventListener("click", () => {
 function progress(number) {
     const numberProgres = number + 1;
     questionProgres.innerText = numberProgres;
-    barProgress.style.width = `calc(${numberProgres} * calc(100% / 5))`;
+    barProgress.style.width = `calc(${numberProgres} * calc(100% / 7))`;
 
 }
 
@@ -335,16 +336,47 @@ function showResult() {
 //     vraisChoix[a].classList.add('yaya');
 // }, false);
 
+// btnResule.addEventListener("click", () => {
+//     stepers[1].classList.remove("active");
+//     stepers[2].classList.add("active");
+//     contentQuestion.classList.add("hide");
+//     resultFinal.classList.remove("hide");
+//     if(stockResult.length === questionnes.length){
+//         resultFinal.innerHTML = `<div>machi korona</div>`
+//     }else if(stockResult.length >= questionnes.length/2){
+//         resultFinal.innerHTML = `<div> korona</div>`
+//     }else if(stockResult.length < questionnes.length/2){
+//         resultFinal.innerHTML = `<div> hhhdhjdj</div>`
+//     }
+// })
+
 btnResule.addEventListener("click", () => {
     stepers[1].classList.remove("active");
     stepers[2].classList.add("active");
     contentQuestion.classList.add("hide");
-    resultFinal.classList.remove("hide");
+    preambule.style.display = "block";
+    // btnResule.classList.remove('hide');
+    btnResule.style.display = "block";
+    btnResule.textContent =  ' Recommencer le test';
+    btnResule.addEventListener('click', ()=>{
+        window.location.reload();
+    })
     if(stockResult.length === questionnes.length){
-        resultFinal.innerHTML = `<div>machi korona</div>`
+        resultFinal.innerHTML = '<p>Nous vous conseillons de rester à votre domicile et de contacter votre médecin' +
+                ' en cas d’apparition de nouveaux symptômes. Vous pourrez aussi utiliser à nouv' +
+                'eau l’application pour réévaluer vos symptômes</p>';
+        resultFinal.style.fontWeight = 'bold';
+        resultFinal.style.color = '#ff0000';
+        // resultFinal.innerHTML = <div>machi korona</div>
     }else if(stockResult.length >= questionnes.length/2){
-        resultFinal.innerHTML = `<div> korona</div>`
+        resultFinal.innerHTML = '<p>Restez chez vous au maximum en attendant que les symptômes disparaissent. Pren' +
+        'ez votre température deux fois par jour. Rappel des mesures d’hygiène.</p>'
+        resultFinal.style.fontWeight = 'bold';
+        resultFinal.style.color = '#ff0000';
     }else if(stockResult.length < questionnes.length/2){
-        resultFinal.innerHTML = `<div> hhhdhjdj</div>`
+        resultFinal.innerHTML = '<p>Votre situation ne relève probablement pas du Covid-19.' +
+        'N’hésitez pas à contacter votre médecin en cas de doute.' + 'Vous pouvez refaire le test en cas de nouveau symptôme pour réévaluer la situation.' + 'Pour toute information concernant le Covid-19 allez vers la page d’accueil.</p>'
+        resultFinal.style.fontWeight = 'bold';
+        resultFinal.style.color = '#369D53';
     }
-})
+});
