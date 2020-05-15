@@ -29,7 +29,7 @@ $color-ciel:#96C5DC;
         border: solid 2px #1078ad;
         color: #1078ad;
         border-radius: 0.6em;
-        &:hover {
+        &:active {
             background-color: #1078ad;
             color: white;
         }
@@ -76,10 +76,11 @@ $color-ciel:#96C5DC;
             padding: 2em 2em;
             background-color: white;
             border: solid 2px #1078ad;
-            &:hover{
+            &:active{
                 color:yellow;
                 background-color: #1078ad;
             }
+            
         }
         p{
             font-size: 1.7em;
@@ -107,20 +108,21 @@ $color-ciel:#96C5DC;
         }
     }
 
-    .btnResule{
-        .rslBtn{
-            border: solid 2px #1078ad;
-            border-radius: 10px;
-            background-color: #cfe4ef;
-            padding: .7em 3em;
-            color: #1078ad;
-            position: relative;
-            left: 50%;
-            transform: translateX(-50%);
-            &:hover{
-                background-color: #1078ad;
-                color: white;
-            }
+    
+}
+.btnResule{
+    .rslBtn{
+        border: solid 2px #1078ad;
+        border-radius: 10px;
+        background-color: #cfe4ef;
+        padding: .7em 3em;
+        color: #1078ad;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        &:hover{
+            background-color: #1078ad;
+            color: white;
         }
     }
 }
@@ -144,6 +146,7 @@ $color-ciel:#96C5DC;
         left: 50%;
         position: relative;
         transform: translate(-50%);
+
 }
 
  
