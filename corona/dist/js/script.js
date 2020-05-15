@@ -168,6 +168,8 @@ function firstStep() {
 let i = 0;
 next.addEventListener("click", () => {
     if (i === 0) {
+        // questionnes[i].classList.add('remove');
+        // questionnes[i+1].classList.remove('remove');
         questionnes[i].classList.remove('remove');
         showResult();
     } else if (i === questionnes.length) {
