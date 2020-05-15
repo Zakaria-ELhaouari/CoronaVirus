@@ -18,10 +18,10 @@ gulp.task('css', function () {
 
 //compressed
 gulp.task('comp', function () {
-    return gulp.src('dist/css/style-dev.css')
+    return gulp.src('corona/css/style-dev.css')
         .pipe(sass(({outputStyle: 'compressed'})))
         .pipe(rename({basename:"style"}))
-        .pipe(dest('dist'))
+        .pipe(dest('corona/css/'))
 });
 
 //connect
